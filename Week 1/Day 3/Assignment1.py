@@ -1,4 +1,3 @@
-# Dictionary to store student names and marks
 students = {}
 
 
