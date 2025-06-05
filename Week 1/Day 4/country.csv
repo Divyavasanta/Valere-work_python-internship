@@ -1,0 +1,253 @@
+Name,Code,Capita
+Afghanistan,AF,50
+Åland Islands,AX,50
+Albania,AL,50
+Algeria,DZ,50
+American Samoa,AS,50
+Andorra,AD,50
+Angola,AO,50
+Anguilla,AI,50
+Antarctica,AQ,50
+Antigua and Barbuda,AG,50
+Argentina,AR,50
+Armenia,AM,50
+Aruba,AW,50
+Australia,AU,50
+Austria,AT,50
+Azerbaijan,AZ,50
+Bahamas,BS,50
+Bahrain,BH,50
+Bangladesh,BD,50
+Barbados,BB,50
+Belarus,BY,50
+Belgium,BE,50
+Belize,BZ,50
+Benin,BJ,50
+Bermuda,BM,50
+Bhutan,BT,50
+"Bolivia, Plurinational State of",BO,50
+"Bonaire, Sint Eustatius and Saba",BQ,50
+Bosnia and Herzegovina,BA,50
+Botswana,BW,50
+Bouvet Island,BV,50
+Brazil,BR,50
+British Indian Ocean Territory,IO,50
+Brunei Darussalam,BN,50
+Bulgaria,BG,50
+Burkina Faso,BF,50
+Burundi,BI,50
+Cambodia,KH,50
+Cameroon,CM,50
+Canada,CA,50
+Cape Verde,CV,50
+Cayman Islands,KY,50
+Central African Republic,CF,50
+Chad,TD,50
+Chile,CL,50
+China,CN,50
+Christmas Island,CX,50
+Cocos (Keeling) Islands,CC,50
+Colombia,CO,50
+Comoros,KM,50
+Congo,CG,50
+"Congo, the Democratic Republic of the",CD,50
+Cook Islands,CK,50
+Costa Rica,CR,50
+Côte d'Ivoire,CI,50
+Croatia,HR,50
+Cuba,CU,50
+Curaçao,CW,50
+Cyprus,CY,50
+Czech Republic,CZ,50
+Denmark,DK,50
+Djibouti,DJ,50
+Dominica,DM,50
+Dominican Republic,DO,50
+Ecuador,EC,50
+Egypt,EG,50
+El Salvador,SV,50
+Equatorial Guinea,GQ,50
+Eritrea,ER,50
+Estonia,EE,50
+Ethiopia,ET,50
+Falkland Islands (Malvinas),FK,50
+Faroe Islands,FO,50
+Fiji,FJ,50
+Finland,FI,50
+France,FR,50
+French Guiana,GF,50
+French Polynesia,PF,50
+French Southern Territories,TF,50
+Gabon,GA,50
+Gambia,GM,50
+Georgia,GE,50
+Germany,DE,50
+Ghana,GH,50
+Gibraltar,GI,50
+Greece,GR,50
+Greenland,GL,50
+Grenada,GD,50
+Guadeloupe,GP,50
+Guam,GU,50
+Guatemala,GT,50
+Guernsey,GG,50
+Guinea,GN,50
+Guinea-Bissau,GW,50
+Guyana,GY,50
+Haiti,HT,50
+Heard Island and McDonald Islands,HM,50
+Holy See (Vatican City State),VA,50
+Honduras,HN,50
+Hong Kong,HK,50
+Hungary,HU,50
+Iceland,IS,50
+India,IN,50
+Indonesia,ID,50
+"Iran, Islamic Republic of",IR,50
+Iraq,IQ,50
+Ireland,IE,50
+Isle of Man,IM,50
+Israel,IL,50
+Italy,IT,50
+Jamaica,JM,50
+Japan,JP,50
+Jersey,JE,50
+Jordan,JO,50
+Kazakhstan,KZ,50
+Kenya,KE,50
+Kiribati,KI,50
+"Korea, Democratic People's Republic of",KP,50
+"Korea, Republic of",KR,50
+Kuwait,KW,50
+Kyrgyzstan,KG,50
+Lao People's Democratic Republic,LA,50
+Latvia,LV,50
+Lebanon,LB,50
+Lesotho,LS,50
+Liberia,LR,50
+Libya,LY,50
+Liechtenstein,LI,50
+Lithuania,LT,50
+Luxembourg,LU,50
+Macao,MO,50
+"Macedonia, the Former Yugoslav Republic of",MK,50
+Madagascar,MG,50
+Malawi,MW,50
+Malaysia,MY,50
+Maldives,MV,50
+Mali,ML,50
+Malta,MT,50
+Marshall Islands,MH,50
+Martinique,MQ,50
+Mauritania,MR,50
+Mauritius,MU,50
+Mayotte,YT,50
+Mexico,MX,50
+"Micronesia, Federated States of",FM,50
+"Moldova, Republic of",MD,50
+Monaco,MC,50
+Mongolia,MN,50
+Montenegro,ME,50
+Montserrat,MS,50
+Morocco,MA,50
+Mozambique,MZ,50
+Myanmar,MM,50
+Namibia,NA,50
+Nauru,NR,50
+Nepal,NP,50
+Netherlands,NL,50
+New Caledonia,NC,50
+New Zealand,NZ,50
+Nicaragua,NI,50
+Niger,NE,50
+Nigeria,NG,50
+Niue,NU,50
+Norfolk Island,NF,50
+Northern Mariana Islands,MP,50
+Norway,NO,50
+Oman,OM,50
+Pakistan,PK,50
+Palau,PW,50
+"Palestine, State of",PS,50
+Panama,PA,50
+Papua New Guinea,PG,50
+Paraguay,PY,50
+Peru,PE,50
+Philippines,PH,50
+Pitcairn,PN,50
+Poland,PL,50
+Portugal,PT,50
+Puerto Rico,PR,50
+Qatar,QA,50
+Réunion,RE,50
+Romania,RO,50
+Russian Federation,RU,50
+Rwanda,RW,50
+Saint Barthélemy,BL,50
+"Saint Helena, Ascension and Tristan da Cunha",SH,50
+Saint Kitts and Nevis,KN,50
+Saint Lucia,LC,50
+Saint Martin (French part),MF,50
+Saint Pierre and Miquelon,PM,50
+Saint Vincent and the Grenadines,VC,50
+Samoa,WS,50
+San Marino,SM,50
+Sao Tome and Principe,ST,50
+Saudi Arabia,SA,50
+Senegal,SN,50
+Serbia,RS,50
+Seychelles,SC,50
+Sierra Leone,SL,50
+Singapore,SG,50
+Sint Maarten (Dutch part),SX,50
+Slovakia,SK,50
+Slovenia,SI,50
+Solomon Islands,SB,50
+Somalia,SO,50
+South Africa,ZA,50
+South Georgia and the South Sandwich Islands,GS,50
+South Sudan,SS,50
+Spain,ES,50
+Sri Lanka,LK,50
+Sudan,SD,50
+Suriname,SR,50
+Svalbard and Jan Mayen,SJ,50
+Swaziland,SZ,50
+Sweden,SE,50
+Switzerland,CH,50
+Syrian Arab Republic,SY,50
+"Taiwan, Province of China",TW,50
+Tajikistan,TJ,50
+"Tanzania, United Republic of",TZ,50
+Thailand,TH,50
+Timor-Leste,TL,50
+Togo,TG,50
+Tokelau,TK,50
+Tonga,TO,50
+Trinidad and Tobago,TT,50
+Tunisia,TN,50
+Turkey,TR,50
+Turkmenistan,TM,50
+Turks and Caicos Islands,TC,50
+Tuvalu,TV,50
+Uganda,UG,50
+Ukraine,UA,50
+United Arab Emirates,AE,50
+United Kingdom,GB,50
+United States,US,50
+United States Minor Outlying Islands,UM,50
+Uruguay,UY,50
+Uzbekistan,UZ,50
+Vanuatu,VU,50
+"Venezuela, Bolivarian Republic of",VE,50
+Viet Nam,VN,50
+"Virgin Islands, British",VG,50
+"Virgin Islands, U.S.",VI,50
+Wallis and Futuna,WF,50
+Western Sahara,EH,50
+Yemen,YE,50
+Zambia,ZM,50
+Zimbabwe,ZW,50
+
+India, 1.4 billion, New Delhi
+India, 1.4 billion, New Delhi
