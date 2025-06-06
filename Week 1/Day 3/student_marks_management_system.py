@@ -103,7 +103,6 @@ def failed_students():
         print("No failed students.")
 
 
-
 def main():
     while True:
         print("\n=== Student Marks Management System ===")

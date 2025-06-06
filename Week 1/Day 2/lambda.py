@@ -1,2 +1,4 @@
-Square = lambda x: x * x
+def Square(x): return x * x
+
+
 print(Square(5))
