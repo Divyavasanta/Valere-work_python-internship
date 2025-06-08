@@ -1,5 +1,5 @@
 try:
-    result = 50/10
+    result = 50 / 10
     print("Your answer is:", result)
 except ZeroDivisionError:
     print("Error: Division by zero is not allowed.")
@@ -7,7 +7,7 @@ except ZeroDivisionError:
 # with exception:
 
 try:
-    result = 40/0
+    result = 40 / 0
 
 except ZeroDivisionError:
     print("Error: Division by zero is not allowed.")
@@ -15,7 +15,7 @@ except ZeroDivisionError:
 # with exceptionn e:
 
 try:
-    result = 40//0
+    result = 40 // 0
     print("Your answer is:", result)
 except ZeroDivisionError as e:
     print("Error: Division by zero is not allowed.")
@@ -24,7 +24,7 @@ except ZeroDivisionError as e:
 # else clause:
 
 try:
-    res = 50/25
+    res = 50 / 25
     print("Your answer is:", res)
 except ZeroDivisionError:
     print("Error: Division by zero is not allowed.")
@@ -34,7 +34,7 @@ else:
 # finally clause:
 
 try:
-    res = 50//0
+    res = 50 // 0
     print(res)
 
 except ZeroDivisionError:
