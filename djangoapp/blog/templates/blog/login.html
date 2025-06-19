@@ -1,0 +1,27 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div class="center-container">
+  <div class="card">
+    <h2>Login</h2>
+    <form method="post" action="{% url 'login' %}">
+      {% csrf_token %}
+      <input type="text" name="username" required placeholder="Username">
+      <input type="password" name="password" required placeholder="Password">
+      <button type="submit">Login</button>
+    </form>
+    <p>New user? <a href="{% url 'signup' %}">Create an account</a></p>
+
+    {% if messages %}
+      <ul>
+        {% for message in messages %}
+          <li>{{ message }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}

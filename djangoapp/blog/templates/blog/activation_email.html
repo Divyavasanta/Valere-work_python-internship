@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Activate Your Account</title>
+</head>
+<body style="font-family: Arial, sans-serif;">
+    <h2>Hello {{ user.username }},</h2>
+    <p>Thanks for signing up!</p>
+    <p>Please click the button below to activate your account:</p>
+    <p style="text-align: center;">
+        <a href="{{ activation_link }}" style="background-color: #007bff; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">
+            Activate Account
+        </a>
+    </p>
+    <p>If the button above doesn't work, copy and paste this link into your browser:</p>
+    <p>{{ activation_link }}</p>
+    <br>
+    <p>Best regards,<br>The Team</p>
+</body>
+</html>
