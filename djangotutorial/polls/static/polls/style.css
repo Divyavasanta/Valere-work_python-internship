@@ -1,0 +1,10 @@
+li a {
+    color: pink;
+}
+
+body {
+    background: white url("/static/polls/images/pexels-souvenirpixels-1519088.jpg") no-repeat;
+    background-size: cover;
+
+
+}
