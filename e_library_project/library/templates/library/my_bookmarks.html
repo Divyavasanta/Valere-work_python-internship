@@ -1,0 +1,45 @@
+
+
+{% block title %}My Bookmarks - E-Library{% endblock %}
+
+{% block content %}
+<h1>📑 My Bookmarked Books</h1>
+
+{% if bookmarks %}
+    <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+        {% for bm in bookmarks %}
+        <div style="border: 1px solid #ccc; padding: 10px; width: 200px; border-radius: 10px; background-color: white; text-align: center;">
+            <img src="{{ bm.book.cover_image.url }}" alt="{{ bm.book.title }}" style="width: 100%; height: 250px; object-fit: cover;">
+            <h4>{{ bm.book.title }}</h4>
+            <p><strong>Author:</strong> {{ bm.book.author }}</p>
+            
+            <a href="{% url 'download_book' bm.book.id %}" 
+               target="_blank" 
+               onclick="showDownloadAlert()" 
+               class="btn btn-sm btn-primary" 
+               style="text-decoration: none; background-color: #007bff; color: white; padding: 6px 10px; border-radius: 5px; display: inline-block; margin-top: 5px;">
+                ⬇️ Download
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+{% else %}
+    <p>You haven't bookmarked any books yet.</p>
+{% endif %}
+{% endblock %}
+
+{% block extra_js %}
+<!-- SweetAlert2 CDN -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+function showDownloadAlert() {
+    Swal.fire({
+        title: '📥 Download started!',
+        text: 'Your book is opening in a new tab.',
+        icon: 'success',
+        timer: 2000,
+        showConfirmButton: false
+    });
+}
+</script>
+{% endblock %}
