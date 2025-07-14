@@ -1,0 +1,29 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<div class="sidebar">
+  <a href="{% url 'feed' %}">Feed</a>
+  <a href="{% url 'add_media' %}">Add Media</a>
+  <a href="{% url 'profile' user_id=request.user.id %}">Profile</a>
+  <a href="{% url 'messages' %}">Messages</a>
+  <a href="{% url 'notifications' %}">Notifications</a>
+ 
+</div>
+
+<div class="dashboard-main">
+  <div class="topbar"><a href="{% url 'logout' %}">Logout</a></div>
+  <h1>Hello, {{ request.user.username }}!</h1>
+
+  <div class="posts">
+    {% for post in posts %}
+      <div>
+        <h2>{{ post.title }}</h2>
+        <p>{{ post.description }}</p>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
