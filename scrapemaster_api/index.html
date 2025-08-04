@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScrapeMaster API</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; margin: 40px; background-color: #f7f7f7; }
+        .container { max-width: 700px; margin: auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        input { width: calc(100% - 22px); padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px; }
+        button { padding: 10px 15px; border: none; background-color: #007bff; color: white; border-radius: 4px; cursor: pointer; }
+        button:hover { background-color: #0056b3; }
+        #status { margin-top: 20px; font-weight: bold; }
+        #results { margin-top: 10px; background: #eee; padding: 15px; border-radius: 4px; white-space: pre-wrap; word-wrap: break-word; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>ScrapeMaster API Frontend</h1>
+        <p>Enter a URL to scrape its headlines (h1 and h2 tags).</p>
+        <input type="text" id="urlInput" placeholder="e.g., https://fastapi.tiangolo.com">
+        <button id="scrapeButton">Scrape URL</button>
+
+        <div id="status"></div>
+        <pre id="results"></pre>
+    </div>
+
+    <script>
+        const urlInput = document.getElementById('urlInput');
+        const scrapeButton = document.getElementById('scrapeButton');
+        const statusDiv = document.getElementById('status');
+        const resultsPre = document.getElementById('results');
+        const API_BASE_URL = "http://127.0.0.1:8000";
+
+        // This function will check for the results periodically.
+        function pollForResult(taskId) {
+            statusDiv.innerText = `Task submitted. Status: in_progress (ID: ${taskId})`;
+            resultsPre.innerText = "Waiting for results...";
+
+            const interval = setInterval(async () => {
+                try {
+                    const response = await fetch(`${API_BASE_URL}/scrape/${taskId}`);
+                    const data = await response.json();
+
+                    statusDiv.innerText = `Task Status: ${data.status}`;
+
+                    if (data.status === 'complete') {
+                        clearInterval(interval); // Stop polling
+                        const headlines = data.results.join('\n');
+                        resultsPre.innerText = headlines;
+                    } else if (data.status === 'failed') {
+                        clearInterval(interval); // Stop polling
+                        resultsPre.innerText = "Scraping failed. Please check the URL and try again.";
+                    }
+                } catch (error) {
+                    console.error("Polling error:", error);
+                    clearInterval(interval);
+                    statusDiv.innerText = "Error checking status.";
+                }
+            }, 2000); // Poll every 2 seconds
+        }
+
+        // This function starts the scraping task.
+        scrapeButton.addEventListener('click', async () => {
+            const url = urlInput.value;
+            if (!url) {
+                alert("Please enter a URL.");
+                return;
+            }
+
+            statusDiv.innerText = "Submitting task...";
+            resultsPre.innerText = "";
+
+            try {
+                // 1. Make the POST request to create the task
+                const response = await fetch(`${API_BASE_URL}/scrape/`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ url: url }),
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                const data = await response.json();
+                
+                // 2. Start polling for the results using the returned task_id
+                pollForResult(data.task_id);
+
+            } catch (error) {
+                console.error("Scraping error:", error);
+                statusDiv.innerText = "Failed to start scraping task.";
+            }
+        });
+    </script>
+</body>
+</html>
